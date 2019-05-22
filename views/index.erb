@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Automated test case runner</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div
+      class="d-flex flex-row justify-content-around text-uppercase text-info p-1"
+      style="background: #d8e0e5; color: #2c404c"
+    >
+      <h3>Automated production testing [ PX CI ]</h3>
+    </div>
+
+    <div class="container">
+      <div class="row d-flex flex-row justify-content-around m-4">
+        <div class="card mb-5" style="max-width: 18rem; background: #ebeff2">
+          <div class="card-body">
+            <h5 class="card-title">SSO login - Cloud Foundry</h5>
+            <hr />
+            <div class="d-flex justify-content-between align-items-center">
+              <form method="post" action="/run" data-remote="true">
+                <input
+                  type="hidden"
+                  id="test"
+                  name="test"
+                  value="sso_login_spec.rb"
+                />
+                <button
+                  type="submit"
+                  class="btn text-white text-uppercase bg-info"
+                >
+                  Run
+                </button>
+              </form>
+              <span class="text-monospace pl-2"><%= status %></span>
+            </div>
+            <br />
+            <span class="text-monospace pl-2"
+              >Duration: <%= execution_time %> sec</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
